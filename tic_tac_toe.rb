@@ -10,15 +10,10 @@ class Board
     puts
     @board.each do |row|
       row.each do |cell|
-        cell.nil? ? print("-") : print(cell.to_s)
+        cell.nil? ? print('-') : print(cell.to_s)
       end
       puts
     end
     puts
-
+  end
 end
-
-board = Board.new
-p board.render
-
-
