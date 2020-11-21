@@ -16,8 +16,11 @@
 # Controls gameplay
 class TicTacToe
   # initialize
+  def initialize
     # set up board
+    @board = Board.new
     # set up players
+    @player_x = Player.new("Player 1", :)
     # assign starting player
 
   # play
