@@ -57,10 +57,19 @@ end
 
 # Manages all player-related functionality
 class Player
+  attr_accessor :name, :piece
+
   # initialize
+  def initialize(name = "Mystery_Player", piece, board)
     # Set marker type
+    raise "Piece must be a Symbol!" unless piece.is_a?(Symbol)
+    @name = name
+    @piece = piece
+    @board = board
+  end
 
   # get_coordinates
+  
     # loop infinitely
       # ask_for_coordinates
       # IF validate_coordinates_format is true
