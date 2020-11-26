@@ -20,12 +20,20 @@ class TicTacToe
     # set up board
     @board = Board.new
     # set up players
-    @player_x = Player.new("Player 1", :)
+    @player_x = Player.new("Player 1", :x, @board)
+    @player_y = Player.new("Player 2", :y, @board)
+
     # assign starting player
+    @current_player = @player_x
+  end
 
   # play
+  def play
+
     # loop infinitely
+    loop do
       # call the board rendering method
+      @board.render
       # ask for coordinates from current player
       # break loop IF game is over
       # switch players
@@ -72,7 +80,9 @@ end
 # Maintains game board state
 class Board
   # initialize board
+  def initialize
     # set up blank data structure
+    @board = Array.new(3){Array.new(3)}
 
   # render
     # loop through data stucture
