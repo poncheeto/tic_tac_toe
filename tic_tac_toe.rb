@@ -69,15 +69,20 @@ class Player
   end
 
   # get_coordinates
-  
+  def get_coordinates
     # loop infinitely
+    loop do
       # ask_for_coordinates
+      coords = ask_for_coordinates
+
       # IF validate_coordinates_format is true
         # IF piece can be placed on board
           # break loop
 
   # ask_for_coordinates
+  def ask_for_coordinates
     # Display message asking for coordinates
+    puts "#{@name}(#{@piece}), enter your coordinates in the form x,y:"
     # pull coordinates from command line
 
   # validate_coordinates_format
