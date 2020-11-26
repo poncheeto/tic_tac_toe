@@ -83,10 +83,22 @@ class Board
   def initialize
     # set up blank data structure
     @board = Array.new(3){Array.new(3)}
+  end
 
   # render
+  def render
+    puts
     # loop through data stucture
+    @board.each do |row|
+      row.each do |cell|
       # display an existing marker if any, else blank
+      cell.nil? ? print("-") : print(cell.to_s)
+      end
+      puts
+    end
+    puts
+
+  end
 
   # add_piece
     # IF piece_location_valid?
