@@ -84,6 +84,8 @@ class Player
     # Display message asking for coordinates
     puts "#{@name}(#{@piece}), enter your coordinates in the form x,y:"
     # pull coordinates from command line
+    gets.strip.split(",").map(&:to_i)
+  end
 
   # validate_coordinates_format
     # UNLESS coordinates are in proper format
