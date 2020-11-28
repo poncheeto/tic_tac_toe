@@ -115,14 +115,26 @@ class Board
   end
 
   # add_piece
+  def add_piece(coords, piece)
     # IF piece_location_valid?
+    if piece_location_valid?(coords)
       # place piece
-    # ELSE
-      # display error message
+      @board[coords[0]][coords[1]] = piece
+    true
+    else
+      false
+    end
+  end
+end
 
-  # pice_location_valid?
+  # piece_location_valid?
+  def piece_location_valid?(coords)
     # is placement within_valid_coordinates?
+    if within_valid_coordinates?(coords)
     # are the piece coordinates_available?
+    coordinates_available?(coords)
+    end
+  end
 
   # within_valid_coordinates?
     # UNLESS piece coords are in the acceptible range
