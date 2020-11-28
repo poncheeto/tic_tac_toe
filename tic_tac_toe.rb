@@ -137,8 +137,15 @@ end
   end
 
   # within_valid_coordinates?
+  def within_valid_coordinates?(coords)
     # UNLESS piece coords are in the acceptible range
+    if (0..2).include?(coords[0]) && (0..2).include?(coords[1])
+      true
+    else
       # display error message
+      puts "Piece coordinates are out of bounds"
+    end
+  end
 
   # coordinates_available?
     # UNLESS piece coords are not occupied
