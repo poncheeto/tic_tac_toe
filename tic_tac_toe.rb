@@ -173,8 +173,13 @@ end
       winning_diagonal?(piece) || winning_horizontal?(piece) || winning_vertical?(piece)
 
   # winning_diagonal?
+  def winning_diagonal?(piece)
     # check if specified piece has a triplet across diagonals
-
+    diagonals.any? do |diag|
+      diag.all?{|cell| cell == piece}
+    end
+  end
+  
   # winning_vertical?
     # check if specified piece has a triplet across verticals
   
