@@ -88,9 +88,16 @@ class Player
   end
 
   # validate_coordinates_format
+  def validate_coordinates_format(coords)
     # UNLESS coordinates are in proper format
+    if coords.is_a?(Array) && coords.size == 2
+      true
+    else
     # display error message
-
+      puts "Your coordinates are in the improper format!"
+    end
+  end
+  
 end
 
 # Maintains game board state
