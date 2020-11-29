@@ -97,7 +97,7 @@ class Player
       puts "Your coordinates are in the improper format!"
     end
   end
-  
+
 end
 
 # Maintains game board state
@@ -157,9 +157,14 @@ end
   end
 
   # coordinates_available?
+  def coordinates_available?(coords)
     # UNLESS piece coords are not occupied
+    if @board[coords[0]][coords[1]].nil?
+      true
+    else
       # display error message
-
+      puts "There is already a piece there!"
+      
   # winning_combo?
     # is there a winning_diagonal?
     # or winning_vertical?
