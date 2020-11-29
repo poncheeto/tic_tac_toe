@@ -164,11 +164,13 @@ end
     else
       # display error message
       puts "There is already a piece there!"
-      
+
   # winning_combo?
+  def winning_combo?(piece)
     # is there a winning_diagonal?
     # or winning_vertical?
     # or winning_horizontal? for that piece?
+      winning_diagonal?(piece) || winning_horizontal?(piece) || winning_vertical?(piece)
 
   # winning_diagonal?
     # check if specified piece has a triplet across diagonals
