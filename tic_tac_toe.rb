@@ -214,9 +214,21 @@ end
     horizontals = []
     3.times do |i|
       horizontals << [@board[0][i],@board[1][i,@board[2][i]]
+    end
+    horizontals
+  end
 
   # full?
+  def full?
     # does every square contain a piece?
+    @board.all? do |row|
+      row.non?(&:nil?)
+    end
+  end
+
 end
+
+t = TicTacToe.new
+t.play
 
   
