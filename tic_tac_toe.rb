@@ -197,7 +197,9 @@ end
   end
 
   # diagonals
+  def diagonals
     # returns the diagonal pieces
+    @board
 
   # verticals
     # returns the vertical pieces
