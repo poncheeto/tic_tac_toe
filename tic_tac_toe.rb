@@ -199,13 +199,21 @@ end
   # diagonals
   def diagonals
     # returns the diagonal pieces
-    @board
+    [[ @board[0][0],@board[1][1],@board[2][2] ],[ @board[2][0],@board[1][1],@board[0][2] ]]
+  end
 
   # verticals
+  def verticals
     # returns the vertical pieces
+    @board
+  end
 
   # horizontals
+  def horizontals
     # returns the horizontal pieces
+    horizontals = []
+    3.times do |i|
+      horizontals << [@board[0][i],@board[1][i,@board[2][i]]
 
   # full?
     # does every square contain a piece?
