@@ -176,20 +176,25 @@ end
   def winning_diagonal?(piece)
     # check if specified piece has a triplet across diagonals
     diagonals.any? do |diag|
-      diag.all?{|cell| cell == piece}
+      diag.all?{ |cell| cell == piece }
     end
   end
   
   # winning_vertical?
   def winning_vertical?(piece)
     # check if specified piece has a triplet across verticals
-    vertical.any? do |vert|
-      vert.all?{|cell| cell == piece}
+    verticals.any? do |vert|
+      vert.all?{ |cell| cell == piece }
     end
   end
   
   # winning_horizontal?
+  def winning_horizontal?(piece)
     # check if specified piece has a triplet across horizontals
+    horizontals.any? do |horz|
+      horz.all?{ |cell| cell == piece }
+    end
+  end
 
   # diagonals
     # returns the diagonal pieces
