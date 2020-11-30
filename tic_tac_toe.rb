@@ -181,7 +181,12 @@ end
   end
   
   # winning_vertical?
+  def winning_vertical?(piece)
     # check if specified piece has a triplet across verticals
+    vertical.any? do |vert|
+      vert.all?{|cell| cell == piece}
+    end
+  end
   
   # winning_horizontal?
     # check if specified piece has a triplet across horizontals
