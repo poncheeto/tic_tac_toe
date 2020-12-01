@@ -66,8 +66,16 @@ class TicTacToe
   end
 
   # check_draw
+  def check_draw
     # If board says it's filled
+    if @board.full?
       # display a draw message
+      puts "Bummer, you've drawn..."
+      true
+    else
+      false
+    end
+  end
 
   # switch_players
     # PlayerX >> PlayerO or vice versa
