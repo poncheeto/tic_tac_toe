@@ -43,16 +43,27 @@ class TicTacToe
       # switch players
       switch_players
     end
-    
+
   end
 
   # check_game_over
+  def check_game_over
     # check_victory
     # check_draw
+    check_victory || check_draw
+  end
 
   # check_victory
+  def check_victory
     # IF board says current player's piece has a winning_combo?
+    if @board.winning_combo?(@current_player.piece)
       # display victory message
+      puts "Congratulations #{@current_player.name}, you win!"
+      true
+    else
+      false
+    end
+  end
 
   # check_draw
     # If board says it's filled
