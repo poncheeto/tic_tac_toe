@@ -78,7 +78,14 @@ class TicTacToe
   end
 
   # switch_players
+  def switch_players
     # PlayerX >> PlayerO or vice versa
+    if @current_player == @player_x
+      @current_player = @player_y
+    else
+      @current_player = @player_x
+    end
+  end
 
 end
 
