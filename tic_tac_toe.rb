@@ -35,8 +35,16 @@ class TicTacToe
       # call the board rendering method
       @board.render
       # ask for coordinates from current player
+      @current_player.get_coordinates
+
       # break loop IF game is over
+      break if check_game_over
+
       # switch players
+      switch_players
+    end
+    
+  end
 
   # check_game_over
     # check_victory
