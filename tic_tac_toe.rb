@@ -265,7 +265,7 @@ class Board
   def full?
     # does every square contain a piece?
     @board.all? do |row|
-      row.non?(&:nil?)
+      row.none?(&:nil?)
     end
   end
 end
