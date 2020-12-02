@@ -175,7 +175,6 @@ class Board
       false
     end
   end
-end
 
   # piece_location_valid?
   def piece_location_valid?(coords)
