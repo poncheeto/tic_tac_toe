@@ -204,6 +204,8 @@ class Board
     else
       # display error message
       puts "There is already a piece there!"
+    end
+  end
 
   # winning_combo?
   def winning_combo?(piece)
