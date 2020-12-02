@@ -213,6 +213,7 @@ class Board
     # or winning_vertical?
     # or winning_horizontal? for that piece?
       winning_diagonal?(piece) || winning_horizontal?(piece) || winning_vertical?(piece)
+  end
 
   # winning_diagonal?
   def winning_diagonal?(piece)
