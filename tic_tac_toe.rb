@@ -4,8 +4,18 @@
   # Declare winner
 
 # Board class
+class Board
   # Create board
-  # 
+  def render_board
+    puts "   |   |"
+    puts "---+---+---"
+    puts "   |   |   "
+    puts "---+---+---"
+    puts "   |   |   "
+  end 
+end
+  
+
 
 # Player class
   # Assign player pieces
