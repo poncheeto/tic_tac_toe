@@ -3,6 +3,7 @@ class Game
   # Start game
   def initialize()
     puts "Welcome to TicTacToe!"
+
   end
   # Check for victory
   # Declare winner
@@ -25,6 +26,13 @@ board = Board.new
 
 # Player class
 class Player
+  attr_accessor :player, :piece
+  
+  def initialize(player, piece)
+    @player = player
+    @piece = piece
+  end
+  
   # Enter coordinates
   def self.choose_move
     puts 'Player 1, choose your move'
