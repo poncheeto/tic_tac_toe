@@ -1,8 +1,8 @@
 #  Game class 
 class Game
   # Start game
-  def self.start(board)
-    board.render_board
+  def initialize()
+    puts "Welcome to TicTacToe!"
   end
   # Check for victory
   # Declare winner
@@ -19,6 +19,8 @@ class Board
     puts '   |   |   '
   end
 end
+# Check for winning combo
+# Check if spot is occupied
 board = Board.new
 
 # Player class
@@ -30,10 +32,6 @@ class Player
 end
   # Assign player pieces
   # Determine who goes first
-  
-  # Check if spot is occupied
   # Add piece
-  # Check for winning combo
 
-Game.start(board)
-Player.choose_move
+Game.new
