@@ -1,7 +1,12 @@
 #  Game class 
+class Game
   # Start game
+  def start
+  end
   # Check for victory
   # Declare winner
+end
+
 
 # Board class
 class Board
