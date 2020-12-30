@@ -16,4 +16,13 @@ def computer_board(board)
   puts '---+---+---'
   puts " #{board[6]}  | #{board[7]}  | #{board[8]} "
 end
-computer_board(board)
+
+# Convert user input to match index of array
+def input_to_index(user_input)
+  user_input.to_i - 1
+end
+
+def make_move(board, index, player)
+  board[index] = player
+end
+
