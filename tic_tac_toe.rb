@@ -1,5 +1,5 @@
 
-board = ['', '', '', '', '', '', '', '', '', '']
+board = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
 # Create board
 def render_board
   puts '   |   |   '
@@ -22,7 +22,21 @@ def input_to_index(user_input)
   user_input.to_i - 1
 end
 
-def make_move(board, index, player)
+def make_move(board, index, first_player = 'X')
   board[index] = player
 end
+
+def position_taken?(board, index)
+  if (board[index] == ' ') || (board[index] == '') || (board[index] == nil)
+    return false
+  else return true
+  end
+end
+
+def validate_move?(board, index)
+  if index.between?(0,8) && !position_taken?(board, index)
+    return true
+  end
+end
+
 
