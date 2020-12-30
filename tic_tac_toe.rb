@@ -1,21 +1,19 @@
-#  Game class
-class Game
-  # Start game
-  def initialize()
-    puts "Welcome to TicTacToe!"
-  end
+
+board = ['', '', '', '', '', '', '', '', '', '']
+# Create board
+def render_board
+  puts '   |   |   '
+  puts '---+---+---'
+  puts '   |   |   '
+  puts '---+---+---'
+  puts '   |   |   '
 end
 
-# Board class
-class Board
-  # Create board
-  def render_board
-    puts '   |   |   '
-    puts '---+---+---'
-    puts '   |   |   '
-    puts '---+---+---'
-    puts '   |   |   '
-  end
+def computer_board(board)
+  puts " #{board[0]}  | #{board[1]}  | #{board[2]} "
+  puts '---+---+---'
+  puts " #{board[3]}  | #{board[4]}  | #{board[5]} "
+  puts '---+---+---'
+  puts " #{board[6]}  | #{board[7]}  | #{board[8]} "
 end
-
-Game.new
+computer_board(board)
