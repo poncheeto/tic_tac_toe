@@ -33,7 +33,7 @@ def position_taken?(board, index)
   end
 end
 
-def validate_move?(board, index)
+def valid_move?(board, index)
   if index.between?(0,8) && !position_taken?(board, index)
     true
   end
@@ -56,6 +56,15 @@ def current_player(board)
 end
 
 def turn(board)
+  puts 'Please choose a number 1-9: '
+  user_input = gets.strip
+  index = input_to_index(user_input)
+  if valid_move?(board, index)
+    make_move(board, index, current_player(board))
+    turn(board)
+  end
+  computer_board(board)
+end
 
 def play(board)
   counter = 0
