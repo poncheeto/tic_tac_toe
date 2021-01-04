@@ -114,4 +114,9 @@ def draw?(board)
   end
 end
 
+def over?(board)
+  if draw?(board) || won?(board) || full?(board)
+    true
+  end
+end
 
