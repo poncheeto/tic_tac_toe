@@ -1,5 +1,6 @@
 
 board = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
+
 WIN_COMBINATIONS = [
   [0,1,2],
   [3,4,5],
@@ -120,3 +121,8 @@ def over?(board)
   end
 end
 
+def winner?(board)
+  if won?(board)
+    board[won?(board)[0]]
+  end
+end
