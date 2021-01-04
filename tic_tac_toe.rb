@@ -91,7 +91,12 @@ def play(board)
     turn(board)
   end
   if won?(board)
-    winner
+    winner(board) == 'X' || winner(board) == "O"
+    puts "Congratulations #{winner(board)}!"
+  elsif draw?(board)
+    puts "Cats game!"
+  end
+end
 
 def won?(board)
   WIN_COMBINATIONS.each do |win_combination|
