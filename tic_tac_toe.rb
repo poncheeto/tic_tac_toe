@@ -78,13 +78,20 @@ def turn(board)
   computer_board(board)
 end
 
+# def play(board)
+#   counter = 0
+#   until counter == 9
+#     turn(board)
+#     counter += 1
+#   end
+# end
+
 def play(board)
-  counter = 0
-  until counter == 9
+  until over?(board)
     turn(board)
-    counter += 1
   end
-end
+  if won?(board)
+    winner
 
 def won?(board)
   WIN_COMBINATIONS.each do |win_combination|
@@ -121,7 +128,7 @@ def over?(board)
   end
 end
 
-def winner?(board)
+def winner(board)
   if won?(board)
     board[won?(board)[0]]
   end
