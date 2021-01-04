@@ -102,3 +102,16 @@ end
 def full?(board)
   board.all? { |i| i == 'X' || i == 'O'}
 end
+
+
+def draw?(board)
+  if !won?(board) && full?(board)
+    true
+  elsif !won?(board) && !full?(board)
+    false
+  else won?(board)
+    false
+  end
+end
+
+
